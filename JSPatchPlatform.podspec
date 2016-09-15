@@ -21,20 +21,24 @@ Pod::Spec.new do |s|
     ss.vendored_frameworks = "JSPatchPlatform.framework"
     ss.resource = "JSPatchPlatform.framework"
     ss.source_files = "JSPatchPlatform.framework/Headers/*.h"
+    ss.public_header_files = "JSPatchPlatform.framework/Headers/*.h"
   end
 
-  s.subspec "Extensions" do |ss|
-    ss.ios.source_files = "JSPatch/Extensions/*.*" 
-    ss.ios.public_header_files = "JSPatch/Extensions/*.h"
-  end
+  #s.subspec "Extensions" do |ss|
+  #  ss.ios.source_files = "JSPatch/Extensions/*.*" 
+  #  ss.ios.public_header_files = "JSPatch/Extensions/*.h"
+  #  ss.dependency 'JSPatchPlatform/Core'
+  #end
 
   s.subspec "JPCFunction" do |ss|
     ss.ios.source_files = "JSPatch/Extensions/JPCFunction/**/*.*" 
     ss.ios.public_header_files = "JSPatch/Extensions/JPCFunction/**/*.h"
+    ss.dependency 'JSPatchPlatform/Core'
   end
 
   s.subspec "JPCFunctionBinder" do |ss|
     ss.ios.source_files = "JSPatch/Extensions/JPCFunctionBinder/**/*.*" 
     ss.ios.public_header_files = "JSPatch/Extensions/JPCFunctionBinder/**/*.h"
+    ss.dependency 'JSPatchPlatform/Core'
   end
 end
