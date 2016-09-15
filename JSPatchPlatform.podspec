@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.social_media_url   = "http://twitter.com/bang590"
 
   s.platform     = :ios, "7.0"
-  s.source       = { :git => "https://github.com/bang590/JSPatch.git", :tag => s.version }
+  s.source       = { :git => "https://github.com/bang590/JSPatchPlatform.git", :tag => s.version }
 
   s.frameworks   = "Foundation", "JavaScriptCore"
   s.library      = "z"
