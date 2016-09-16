@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "JSPatchPlatform"
-  s.version      = "1.6"
+  s.version      = "1.6.1"
   s.summary      = "jspatch.com SDK"
 
   s.license      = { :type => "MIT", :file => "LICENSE" }
@@ -27,11 +27,11 @@ Pod::Spec.new do |s|
     ss.public_header_files = "JSPatchPlatform.framework/Headers/*.h"
   end
 
-  #s.subspec "Extensions" do |ss|
-  #  ss.ios.source_files = "JSPatch/Extensions/*.*" 
-  #  ss.ios.public_header_files = "JSPatch/Extensions/*.h"
-  #  ss.dependency 'JSPatchPlatform/Core'
-  #end
+  s.subspec "Extensions" do |ss|
+    ss.ios.source_files = "JSPatch/Extensions/*.*" 
+    ss.ios.public_header_files = "JSPatch/Extensions/*.h"
+    ss.dependency 'JSPatchPlatform/Core'
+  end
 
   s.subspec "JPCFunction" do |ss|
     ss.ios.source_files = "JSPatch/Extensions/JPCFunction/**/*.*" 

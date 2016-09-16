@@ -1,4 +1,4 @@
-framework module JSPatch {
+framework module JSPatchPlatform {
   umbrella header "JSPatch.h"
 
   export *
