@@ -1,6 +1,6 @@
 //
 //  JSPatch.h
-//  JSPatch Platform SDK version 1.6.2
+//  JSPatch Platform SDK version 1.6.3
 //
 //  Created by bang on 15/7/28.
 //  Copyright (c) 2015 bang. All rights reserved.
@@ -89,11 +89,11 @@ typedef NS_ENUM(NSInteger, JPCallbackType){
 
 
 /*
- 使用https请求
- 速度会比不使用https慢。脚本内容已经经过多重加密，不使用https也不会有安全问题。
+ 使用http请求
+ 默认使用https请求，若有特殊需求可以降为http
  在 `+sync:` 之前调用。
  */
-+ (void)setupHttps;
++ (void)setupHttp;
 
 
 
