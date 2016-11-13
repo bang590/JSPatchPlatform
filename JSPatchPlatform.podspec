@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "JSPatchPlatform"
-  s.version      = "1.6.2"
+  s.version      = "1.6.3"
   s.summary      = "jspatch.com SDK"
 
   s.license      = { :type => "MIT", :file => "LICENSE" }
