@@ -1,6 +1,6 @@
 //
 //  JSPatch.h
-//  JSPatch Platform SDK version 1.6.4
+//  JSPatch Platform SDK version 1.6.5
 //
 //  Created by bang on 15/7/28.
 //  Copyright (c) 2015 bang. All rights reserved.
