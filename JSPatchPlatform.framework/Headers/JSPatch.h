@@ -1,6 +1,6 @@
 //
 //  JSPatch.h
-//  JSPatch Platform SDK version 1.6.5
+//  JSPatch Platform SDK version 1.6.6
 //
 //  Created by bang on 15/7/28.
 //  Copyright (c) 2015 bang. All rights reserved.
@@ -16,6 +16,8 @@ typedef NS_ENUM(NSInteger, JPCallbackType){
     JPCallbackTypeCondition     = 4,    //条件下发
     JPCallbackTypeGray          = 5,    //灰度下发
     JPCallbackTypeUpdateFail    = 6,    //脚本拉取错误
+    JPCallbackTypeException     = 7,    //配置错误
+    JPCallbackTypeJSException   = 8,    //js脚本执行出错
 };
 
 typedef NS_ENUM(NSInteger, JPErrorCode) {
@@ -120,8 +122,20 @@ typedef NS_ENUM(NSInteger, JPErrorCode) {
 + (void)setupTestScriptFileName:(NSString *)fileName;
 
 
+#pragma mark - Debug
+
+/*
+ 在状态栏显示调试按钮，点击可以看到所有 JSPatch 相关的 log 和内容
+ */
++ (void)showDebugView;
+
+/*
+ 直接弹起 DebugViewController 显示所有 JSPatch 相关的 log 和内容
+ */
++ (void)presentDebugViewController;
+
+
 #pragma mark - 在线参数
-/***************** 在线参数 ******************/
 /*
  请求在线参数
  默认30分钟内多次调用只请求一次，若要实时性更强，请使用 +updateConfigWithAppKey:withInterval: 接口
